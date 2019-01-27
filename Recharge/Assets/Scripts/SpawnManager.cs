@@ -62,16 +62,6 @@ public class SpawnManager : MonoBehaviour
 
     private void Update()
     {
-        void OnCollisionEnter(Collision collide)
-        {
-            SpawnManager sm = new SpawnManager();
-            sm.hitIconsCount += 1;
-        }
-
-        //if(hitIconsCount == 8)
-        //{
-        //    spawnPointArray = null;
-        //}
     }
 
 

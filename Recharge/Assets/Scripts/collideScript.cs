@@ -14,10 +14,8 @@ public class collideScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("We collided with " + collision.collider.name);
-
-
-
+        hitIconsCount += 1;
+        Destroy(gameObject);
     }
 
 
