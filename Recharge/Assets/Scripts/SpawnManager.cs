@@ -3,9 +3,12 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    public static string[] hitIconsList { get; set; }
+
     public GameObject[] iconObject;
     public float spawnTime = 3f;
     public Transform[] spawnPoints;
+    private bool startValue = true;
 
     ////public int? iconHits = null;
 
@@ -21,7 +24,7 @@ public class SpawnManager : MonoBehaviour
     void Spawn()
     {
         //START: Default show all spawn on initialization of the game
-        if (spawnPointArray.Count != 8)
+        if (spawnPointArray.Count != 8 && startValue == true)
         {
             int spawnIconObject = 0;
 
@@ -33,20 +36,17 @@ public class SpawnManager : MonoBehaviour
 
                 spawnPointArray.Add(i);
             }
-        } else //GAMEPLAY: track iconObjects that have been hit
+
+            startValue = false;
+        }
+        else //GAMEPLAY: track iconObjects that have been hit
         {
-
-
-
-
-
-
-
-
-
 
         }
     }
+
+
+
 
 
     //if(playerHealth.currentHealth <= 0f)
