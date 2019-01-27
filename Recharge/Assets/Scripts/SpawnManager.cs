@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public static string[] hitIconsList { get; set; }
+    public int hitIconsList { get; set; }
 
     public GameObject[] iconObject;
     public float spawnTime = 3f;
@@ -14,7 +14,7 @@ public class SpawnManager : MonoBehaviour
     ////public int? iconHits = null;
     
     public List<int> spawnPointArray = new List<int>();
-    public static String[] iconsHitList = null;
+    //public static String[] iconsHitList = null;
     ////List<int> iconObjectArray = new List<int>();
 
     // Start is called before the first frame up
@@ -25,26 +25,48 @@ public class SpawnManager : MonoBehaviour
 
     void Spawn()
     {
-        //START: Default show all spawn on initialization of the game
-        if (spawnPointArray.Count != 8 && startValue == true)
+        if (spawnPointArray.Count != 8)
         {
-            int spawnIconObject = 0;
-
-            for (int i = 0; i < iconObject.Length; i++)
+            //START: Default show all spawn on initialization of the game
+            if (startValue == true)
             {
-                spawnIconObject = i;
+                int spawnIconObject = 0;
 
-                Instantiate(iconObject[spawnIconObject], spawnPoints[spawnIconObject].position, spawnPoints[spawnIconObject].rotation);
+                for (int i = 0; i < iconObject.Length; i++)
+                {
+                    spawnIconObject = i;
 
-                spawnPointArray.Add(i);
+                    Instantiate(iconObject[spawnIconObject], spawnPoints[spawnIconObject].position, spawnPoints[spawnIconObject].rotation);
+
+                    spawnPointArray.Add(i);
+                }
+
+                startValue = false;
             }
+            //GAMEPLAY: check that all iconObjects have been hit
+            else if (hitIconsList == 8)
+            {
+                int spawnIconObject = 0;
 
-            startValue = false;
-        }
-        else //GAMEPLAY: track iconObjects that have been hit
+                for (int i = 0; i < iconObject.Length; i++)
+                {
+                    spawnIconObject = i;
+
+                    Instantiate(iconObject[spawnIconObject], spawnPoints[spawnIconObject].position, spawnPoints[spawnIconObject].rotation);
+
+                    spawnPointArray.Add(i);
+                }
+            }
+        } else
         {
-
+            //spawnPointArray == 8
+            //DO NOTHING
         }
+
+
+
+
+
     }
 
 
