@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public static string[] hitIconsList { get; set; }
+    public float hitIconsCount { get; set; }
 
     public GameObject[] iconObject;
     public float spawnTime = 3f;
@@ -14,7 +14,6 @@ public class SpawnManager : MonoBehaviour
     ////public int? iconHits = null;
     
     public List<int> spawnPointArray = new List<int>();
-    public static String[] iconsHitList = null;
     ////List<int> iconObjectArray = new List<int>();
 
     // Start is called before the first frame up
@@ -44,6 +43,14 @@ public class SpawnManager : MonoBehaviour
         else //GAMEPLAY: track iconObjects that have been hit
         {
 
+        }
+    }
+
+    private void Update()
+    {
+        if(hitIconsCount == 8)
+        {
+            spawnPointArray = null;
         }
     }
 
