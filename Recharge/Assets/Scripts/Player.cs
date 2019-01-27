@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private Vector2 direction = Vector2.zero;
 
     public Vector2 homeLocation = Vector2.zero;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -52,6 +53,7 @@ public class Player : MonoBehaviour
     {
         transform.localPosition += (Vector3)direction * speed * Time.deltaTime;
     }
+
 
     //// CODE BASED ON MOVING TUTORIAL --Incomplete
     //private void UpdateOrientation()

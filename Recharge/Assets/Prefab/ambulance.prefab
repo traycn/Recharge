@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3532704212844844694}
   - component: {fileID: 6896043666840485967}
   - component: {fileID: 2404632398471183695}
-  - component: {fileID: 1883088752495832026}
+  - component: {fileID: 3212805292529196354}
   m_Layer: 0
   m_Name: ambulance
   m_TagString: Untagged
@@ -97,7 +97,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.04}
   serializedVersion: 2
   m_Radius: 0.19
---- !u!114 &1883088752495832026
+--- !u!114 &3212805292529196354
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,6 +106,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3790778042117756233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0060a89f99e1c849ac097daeaf770f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d3e9bd56063355439e7e85f5109e37f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
