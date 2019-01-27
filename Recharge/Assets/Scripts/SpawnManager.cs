@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-<<<<<<< HEAD
-    public int hitIconsList { get; set; }
-=======
     public float hitIconsCount { get; set; }
->>>>>>> 4a2bda0cfac2ff1db219bfcda1ef75021ed01080
 
     public GameObject[] iconObject;
     public float spawnTime = 3f;
@@ -18,11 +14,6 @@ public class SpawnManager : MonoBehaviour
     ////public int? iconHits = null;
     
     public List<int> spawnPointArray = new List<int>();
-<<<<<<< HEAD
-    //public static String[] iconsHitList = null;
-=======
->>>>>>> 4a2bda0cfac2ff1db219bfcda1ef75021ed01080
-    ////List<int> iconObjectArray = new List<int>();
 
     // Start is called before the first frame up
     void Start()
@@ -51,7 +42,7 @@ public class SpawnManager : MonoBehaviour
                 startValue = false;
             }
             //GAMEPLAY: check that all iconObjects have been hit
-            else if (hitIconsList == 8)
+            else if (hitIconsCount == 8)
             {
                 int spawnIconObject = 0;
 
@@ -69,11 +60,6 @@ public class SpawnManager : MonoBehaviour
             //spawnPointArray == 8
             //DO NOTHING
         }
-
-
-
-
-
     }
 
     private void Update()
