@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
         CheckInput();
 
         Move();
-        //UpdateOrientation();
     }
 
     private void CheckInput()

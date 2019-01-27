@@ -11,8 +11,6 @@ public class SpawnManager : MonoBehaviour
     public Transform[] spawnPoints;
     private bool startValue = true;
 
-    ////public int? iconHits = null;
-    
     public List<int> spawnPointArray = new List<int>();
 
     // Start is called before the first frame up
@@ -64,10 +62,16 @@ public class SpawnManager : MonoBehaviour
 
     private void Update()
     {
-        if(hitIconsCount == 8)
+        void OnCollisionEnter(Collision collide)
         {
-            spawnPointArray = null;
+            SpawnManager sm = new SpawnManager();
+            sm.hitIconsCount += 1;
         }
+
+        //if(hitIconsCount == 8)
+        //{
+        //    spawnPointArray = null;
+        //}
     }
 
 

@@ -4,9 +4,21 @@ using UnityEngine;
 
 public class collideScript : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collide)
+    public float hitIconsCount { get; set; }
+
+    private void Start()
     {
-        SpawnManager sm = new SpawnManager();
-        sm.hitIconsCount += 1;
+
     }
+
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("We collided with " + collision.collider.name);
+
+
+
+    }
+
+
 }
