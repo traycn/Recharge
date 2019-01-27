@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
@@ -8,8 +9,9 @@ public class SpawnManager : MonoBehaviour
     public Transform[] spawnPoints;
 
     ////public int? iconHits = null;
-
-    List<int> spawnPointArray = new List<int>();
+    
+    public List<int> spawnPointArray = new List<int>();
+    public static String[] iconsHitList = null;
     ////List<int> iconObjectArray = new List<int>();
 
     // Start is called before the first frame up
