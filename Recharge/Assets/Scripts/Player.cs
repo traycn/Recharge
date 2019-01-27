@@ -20,8 +20,7 @@ public class Player : MonoBehaviour
         CheckInput();
 
         Move();
-
-        UpdateOrientation();
+        //UpdateOrientation();
     }
 
     private void CheckInput()
