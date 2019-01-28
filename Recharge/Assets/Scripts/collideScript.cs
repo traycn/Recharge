@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class collideScript : MonoBehaviour
 {
-    public float hitIconsCount { get; set; }
 
     private void Start()
     {
@@ -14,7 +13,18 @@ public class collideScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        hitIconsCount += 1;
+
+        if (collision.collider.name != "Player")
+            return;
+
+        Player player = collision.collider.GetComponent<Player>();
+
+        if(player == null)
+        {
+            Debug.LogError("Something is wrong!");
+        }
+
+        player.AddScore();
         Destroy(gameObject);
     }
 

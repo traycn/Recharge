@@ -10,6 +10,7 @@ public class SpawnManager : MonoBehaviour
     public float spawnTime = 3f;
     public Transform[] spawnPoints;
     private bool startValue = true;
+    public bool noMoreIcons = false;
 
     public List<int> spawnPointArray = new List<int>();
 
@@ -36,12 +37,15 @@ public class SpawnManager : MonoBehaviour
 
                     spawnPointArray.Add(i);
                 }
-
                 startValue = false;
             }
+        } else
+        {
             //GAMEPLAY: check that all iconObjects have been hit
-            else if (hitIconsCount == 8)
+            if (noMoreIcons == true)
             {
+                spawnPointArray.Clear();
+
                 int spawnIconObject = 0;
 
                 for (int i = 0; i < iconObject.Length; i++)
@@ -52,9 +56,10 @@ public class SpawnManager : MonoBehaviour
 
                     spawnPointArray.Add(i);
                 }
+
+                noMoreIcons = false;
             }
-        } else
-        {
+
             //spawnPointArray == 8
             //DO NOTHING
         }
