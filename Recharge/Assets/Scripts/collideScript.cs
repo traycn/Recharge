@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class collideScript : MonoBehaviour
 {
-
+    public AudioSource sound;
     private void Start()
     {
 
@@ -13,7 +13,7 @@ public class collideScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-
+        sound.Play();
         if (collision.collider.name != "Player")
             return;
 
@@ -25,7 +25,7 @@ public class collideScript : MonoBehaviour
         }
 
         player.AddScore();
-        Destroy(gameObject);
+        Destroy(gameObject, 0.02f);
     }
 
 
