@@ -59,9 +59,6 @@ public class SpawnManager : MonoBehaviour
 
                 noMoreIcons = false;
             }
-
-            //spawnPointArray == 8
-            //DO NOTHING
         }
     }
 
